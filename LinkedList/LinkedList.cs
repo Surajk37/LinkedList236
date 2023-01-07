@@ -12,7 +12,7 @@ namespace LinkedList
         public Node head;
 
         //Adding Data to LinkedList
-        public void Add(int data)
+        public void Append(int data)
         {
             //Object of Node
             Node node = new Node(data);
@@ -25,13 +25,13 @@ namespace LinkedList
             }
             else
             {
-                Node addr = new Node(data);
-                Node h1 = null;
-                h1 = this.head;
-                this.head = addr;
-                Node temp = addr;
-                temp.next = h1;
-                Console.WriteLine(addr.data + ": Inserted SuccessFully");
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+                Console.WriteLine(node.data + ": Inserted SuccessFully");
             }
 
             //Displaying  LinkedList Data

@@ -8,9 +8,9 @@
              
             //Calling Class LinkedList
             LinkedList linkedList = new LinkedList(); 
-            linkedList.Add(70);
-            linkedList.Add(30);
-            linkedList.Add(56);
+            linkedList.Append(56);
+            linkedList.Append(30);
+            linkedList.Append(70);
             linkedList.Display();
 
             Console.ReadLine();
