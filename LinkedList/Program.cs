@@ -8,9 +8,13 @@
              
             //Calling Class LinkedList
             LinkedList linkedList = new LinkedList(); 
-            linkedList.Append(56);
-            linkedList.Append(30);
-            linkedList.Append(70);
+           
+            linkedList.Add(56);
+            linkedList.Add(70);
+            Console.WriteLine("\n\tBefore Inserting new node to Linked List");
+            linkedList.Display();
+            linkedList.InsertAtParticularPosition(2, 30);
+            Console.WriteLine("\n\n\tAfter Inserting new node to Linked List");
             linkedList.Display();
 
             Console.ReadLine();

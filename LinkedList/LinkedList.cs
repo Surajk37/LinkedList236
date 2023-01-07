@@ -12,7 +12,7 @@ namespace LinkedList
         public Node head;
 
         //Adding Data to LinkedList
-        public void Append(int data)
+        public void Add(int data)
         {
             //Object of Node
             Node node = new Node(data);
@@ -34,8 +34,32 @@ namespace LinkedList
                 Console.WriteLine(node.data + ": Inserted SuccessFully");
             }
 
-            //Displaying  LinkedList Data
         }
+        //Adding Data In Particular Position
+        public void InsertAtParticularPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+        //Displaying  LinkedList Data
         public void Display()
         {
             //Head is Null then List is empty
