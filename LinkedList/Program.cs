@@ -8,7 +8,7 @@
             while (true)
             {
                 Console.WriteLine("Please Select option from below list");
-                Console.WriteLine("\n1. Add Linked List \n2. Insert New Node \n3. Delete First Element \n4. Delete Last Element");
+                Console.WriteLine("\n1. Add Linked List \n2. Insert New Node \n3. Delete First Element \n4. Delete Last Element \n5. To Search Node From LinkedList ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 //Calling Class LinkedList
                 LinkedList linkedList = new LinkedList();
@@ -49,10 +49,17 @@
                         Console.WriteLine("\n\n\tAfter Deleting First Element from  Linked List");
                         linkedList.Display();
                         break;
+                    case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.SearchElement(30);  //Searching an Element
+                        Console.WriteLine("\nData In Linked List");
+                        linkedList.Display();
+                        break;
                     default:
                         Console.WriteLine("Please enter valid option");
                         break;
-
                 }
                 Console.ReadLine();
             }

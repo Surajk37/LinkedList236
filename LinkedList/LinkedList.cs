@@ -12,7 +12,7 @@ namespace LinkedList
         public Node head;
 
         //Adding Data to LinkedList
-        public void Add(int data)
+        public  void Add(int data)
         {
             //Object of Node
             Node node = new Node(data);
@@ -82,6 +82,23 @@ namespace LinkedList
             }
             newNode.next = null;
             return head;
+        }
+        //Search an Element
+        public bool SearchElement(int value)
+        {
+            int index = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                index++;
+                if (temp.data.Equals(value))
+                {
+                    Console.WriteLine(value + " is Found At Index = " + index);
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
         }
 
         //Displaying  LinkedList Data
